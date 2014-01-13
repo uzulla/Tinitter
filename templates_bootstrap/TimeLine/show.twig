@@ -1,0 +1,24 @@
+{% extends "frame.twig" %}
+{% block content %}
+{% autoescape true %}
+
+{% if page_num == 1 %}
+    {% include "_Parts/Form.twig" %}
+{% endif %}
+
+{% include "_Parts/Pager.twig" %}
+
+{% for post in post_list %}
+    <div class="postcell">
+        <div class="body">{{ post.body|nl2br }}</div>
+        <div class="info">
+            post by <span class="nickname">{{ post.nickname }}</span>
+            <span class="date">({{ post.created_at }})</span>
+        </div>
+    </div>
+{% endfor %}
+
+{% include "_Parts/Pager.twig" %}
+
+{% endautoescape %}
+{% endblock %}

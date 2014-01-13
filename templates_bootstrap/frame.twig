@@ -1,0 +1,46 @@
+{% autoescape true %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+<header class="navbar navbar-inverse bs-docs-nav" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">Tinitter</a>
+        </div>
+    </div>
+</header>
+
+<main id="content" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <hr>
+        <p class="text-center">Powered by PHP</p>
+    </div>
+</footer>
+
+<script src="/vendor/jquery.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endautoescape %}

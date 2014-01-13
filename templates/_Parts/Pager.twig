@@ -1,19 +1,19 @@
 {% autoescape true %}
-<br>
+<div class="text-center">
+    <ul class="pagination pagination-lg">
+        {% if page_num > 1 %}
+            {% if (page_num-1) == 1 %}
+                <li class="active"><a href="/" class="prev">&laquo;</a></li>
+            {% else %}
+                <li class="active"><a href="/page/{{page_num-1}}" class="prev">&laquo;</a></li>
+            {% endif %}
+        {% endif %}
 
-{% if page_num > 1 %}
-    {% if (page_num-1) == 1 %}
-        <a href="/" class="prev">＜前</a>
-    {% else %}
-        <a href="/page/{{page_num-1}}" class="prev">＜前</a>
-    {% endif %}
-{% endif %}
+        <li><span class="page-num">{{page_num}}</span></li>
 
-[<span class="page-num">{{page_num}}</span>p]
-
-{% if next_page_is_exist %}
-    <a href="/page/{{page_num+1}}" class="next">次＞</a>
-{% endif %}
-
-<br>
+        {% if next_page_is_exist %}
+            <li class="active"><a href="/page/{{page_num+1}}" class="next">&raquo;</a></li>
+        {% endif %}
+    </ul>
+</div>
 {% endautoescape %}

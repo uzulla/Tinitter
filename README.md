@@ -127,15 +127,6 @@ define('DEBUG', true);
 
 `true`時は、例外時にSlimがスタックトレースを出力します。本番では`false`にします。
 
-## テンプレート切り替え
-
-同梱されたBootstrapを適用したテンプレートを利用するには、`TEMPLATES_DIR_PATH`を変更します。
-
-```
-# config.php
-define('TEMPLATES_DIR_PATH', __DIR__.'/templates_bootstrap');
-```
-
 # 自動テスト
 
 `test/README.md`を参照してください

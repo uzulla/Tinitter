@@ -40,6 +40,16 @@ $ php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
 $ php composer.phar install
 ```
 
+## config を作成
+
+```
+# サンプルコンフィグファイルをコピーして作成する
+$ cp config.php.sample config.php
+```
+
+SQLiteを使う場合には、内容を変更する必要はありません。
+Mysqlを利用する場合には、後述の設定を行ってください。
+
 ## DBセットアップ
 
 ### SQLite利用時

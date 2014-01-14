@@ -1,0 +1,19 @@
+{% autoescape true %}
+<br>
+
+{% if page_num > 1 %}
+    {% if (page_num-1) == 1 %}
+        <a href="/" class="prev">＜前</a>
+    {% else %}
+        <a href="/page/{{page_num-1}}" class="prev">＜前</a>
+    {% endif %}
+{% endif %}
+
+[<span class="page-num">{{page_num}}</span>p]
+
+{% if next_page_is_exist %}
+    <a href="/page/{{page_num+1}}" class="next">次＞</a>
+{% endif %}
+
+<br>
+{% endautoescape %}

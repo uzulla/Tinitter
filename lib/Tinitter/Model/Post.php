@@ -26,6 +26,6 @@ class Post extends \Illuminate\Database\Eloquent\Model
             $next_page_is_exist = false;
         }
 
-        return [$post_list, $next_page_is_exist];
+        return array($post_list, $next_page_is_exist);
     }
 }

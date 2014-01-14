@@ -18,7 +18,7 @@ class PostTest extends \Tinitter\Test\Base{
     }
     private function _testOnlyNickname($nickname)
     {
-        $input = ['nickname'=>$nickname, 'body'=>'ok_body'];
+        $input = array('nickname'=>$nickname, 'body'=>'ok_body');
         return V_Post::byArray($input);
     }
 
@@ -38,7 +38,7 @@ class PostTest extends \Tinitter\Test\Base{
     }
     private function _testOnlyBody($body)
     {
-        $input = ['nickname'=>'oknickname', 'body'=>$body];
+        $input = array('nickname'=>'oknickname', 'body'=>$body);
         return V_Post::byArray($input);
     }
     private function _createLongStr($length, $use_str="a")

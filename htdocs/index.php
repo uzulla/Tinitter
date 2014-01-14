@@ -12,11 +12,11 @@ require __DIR__.'/../config.php';
 \Base\DB::registerIlluminate($db_settings);
 
 // Slim初期化
-$app = new \Slim\Slim([
+$app = new \Slim\Slim(array(
     'templates.path' => TEMPLATES_DIR_PATH,
     'view' => new \Slim\Views\Twig(),
     'debug' => DEBUG,
-]);
+));
 
 // Slimにルートを登録
 \Tinitter\Route::registration($app);

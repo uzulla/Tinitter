@@ -10,11 +10,11 @@ class TimeLine
 
         $app->render(
             'TimeLine/show.twig',
-            [
+            array(
                 'post_list' => $post_list,
                 'page_num' => $page_num,
                 'next_page_is_exist' => $next_page_is_exist
-            ]
+            )
         );
     }
 }

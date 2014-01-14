@@ -20,10 +20,10 @@ class Post
         }else{
             $app->render(
                 'Post/form.twig',
-                [
+                array(
                     'params' => $params,
                     'error_list' => $error_list
-                ]
+                )
             );
         }
     }

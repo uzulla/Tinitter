@@ -9,10 +9,10 @@ require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/../config.php';
 
 // 設定をテスト用DB設定で上書き
-$db_settings = [
+$db_settings = array(
     'driver' => 'sqlite',
     'database' => ":memory:", // メモリ内にテスト用DBを作成する
-];
+);
 define("TEST_SCHEMA_SQL", __DIR__."/../schema.sqlite3.sql");
 
 // DB接続セットアップ

@@ -2,7 +2,7 @@
 namespace Tinitter\Test;
 class Base extends \PHPUnit_Framework_TestCase
 {
-    use \Uzulla\MockSlimClient; // traitを利用
+    #use \Uzulla\MockSlimClient; // traitを利用
 
     /**
      * \Uzulla\MockSlimClientで呼び出される
@@ -19,10 +19,10 @@ class Base extends \PHPUnit_Framework_TestCase
      */
     static function createSlim()
     {
-        return new \Slim\Slim([
+        return new \Slim\Slim(array(
             'templates.path' => TEMPLATES_DIR_PATH,
             'view' => new \Slim\Views\Twig()
-        ]);
+        ));
     }
 
     /**

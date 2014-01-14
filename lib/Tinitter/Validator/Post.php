@@ -4,7 +4,7 @@ class Post extends \Respect\Validation\Validator
 {
     static function byArray(array $params)
     {
-        $error_list = [];
+        $error_list = array();
 
         // nickname をテスト
         if(!static::alnum()->validate($params['nickname'])){

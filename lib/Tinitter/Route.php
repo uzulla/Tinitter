@@ -6,7 +6,7 @@ class Route
      * 渡されたslimインスタンスにルートを登録
      * @param \Slim\Slim $app
      */
-    static function registration (\Slim\Slim $app)
+    public static function registration(\Slim\Slim $app)
     {
         // SlimのCSRF対策プラグインを有効化
         $app->add(new \Slim\Extras\Middleware\CsrfGuard());

@@ -5,10 +5,10 @@ class Post extends \Illuminate\Database\Eloquent\Model
     /**
      * ページ指定での投稿取得
      * @param $per_page １ページあたりの件数
-     * @param int $page_num ページ番号
+     * @param  int   $page_num ページ番号
      * @return array 投稿の配列と、次ページ存在のフラグ
      */
-    static function getByPage($per_page, $page_num)
+    public static function getByPage($per_page, $page_num)
     {
         // スキップする件数を計算
         $offset = $per_page*($page_num-1);
@@ -19,10 +19,10 @@ class Post extends \Illuminate\Database\Eloquent\Model
             ->get()->all();
 
         // 次ページ存在をチェック
-        if(count($post_list)>$per_page){
+        if (count($post_list)>$per_page) {
             array_pop($post_list); //確認用の１件を捨てる
             $next_page_is_exist = true;
-        }else{
+        } else {
             $next_page_is_exist = false;
         }
 

@@ -1,12 +1,13 @@
 <?php
 namespace TestCase\Model;
 use \Tinitter\Model\Post as M_Post;
-class PostTest extends \Tinitter\Test\Base{
-
+class PostTest extends \Tinitter\Test\Base
+{
     /**
      * Postが作成できるか、取得できるか
      */
-    public function testPostCreate(){
+    public function testPostCreate()
+    {
         // 一件保存
         $post = new M_Post;
         $post->nickname = 'nickname';
@@ -23,7 +24,8 @@ class PostTest extends \Tinitter\Test\Base{
     /**
      * ページ指定で取得できるか
      */
-    public function testGetByPage(){
+    public function testGetByPage()
+    {
         \Tinitter\Test\Farming::farmingPost(35);
 
         list($post_list, $next_page_is_exist) = M_Post::getByPage(10, 1);

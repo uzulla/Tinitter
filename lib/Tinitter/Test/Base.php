@@ -8,7 +8,7 @@ class Base extends \PHPUnit_Framework_TestCase
      * \Uzulla\MockSlimClientで呼び出される
      * @param \Slim\Slim $app
      */
-    static function registrationRoute(\Slim\Slim $app)
+    public static function registrationRoute(\Slim\Slim $app)
     {
         \Tinitter\Route::registration($app);
     }
@@ -17,7 +17,7 @@ class Base extends \PHPUnit_Framework_TestCase
      * \Uzulla\MockSlimClientで呼び出される
      * @return \Slim\Slim
      */
-    static function createSlim()
+    public static function createSlim()
     {
         return new \Slim\Slim([
             'templates.path' => TEMPLATES_DIR_PATH,

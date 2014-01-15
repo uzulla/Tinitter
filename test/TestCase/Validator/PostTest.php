@@ -1,7 +1,8 @@
 <?php
 namespace TestCase\Validator;
 use \Tinitter\Validator\Post as V_Post;
-class PostTest extends \Tinitter\Test\Base{
+class PostTest extends \Tinitter\Test\Base
+{
     /**
      * ニックネームが正しく検証できるか
      */
@@ -19,13 +20,15 @@ class PostTest extends \Tinitter\Test\Base{
     private function _testOnlyNickname($nickname)
     {
         $input = ['nickname'=>$nickname, 'body'=>'ok_body'];
+
         return V_Post::byArray($input);
     }
 
     /**
      * 本文が正しく検証できるか
      */
-    public function testBody(){
+    public function testBody()
+    {
         $this->assertArrayHasKey('body', $this->_testOnlyBody(''));
 
         $long_1000_chars = $this->_createLongStr(1000);
@@ -39,14 +42,16 @@ class PostTest extends \Tinitter\Test\Base{
     private function _testOnlyBody($body)
     {
         $input = ['nickname'=>'oknickname', 'body'=>$body];
+
         return V_Post::byArray($input);
     }
     private function _createLongStr($length, $use_str="a")
     {
         $str = '';
-        while(mb_strlen($str)<$length){
+        while (mb_strlen($str)<$length) {
             $str = $str.$use_str;
         }
+
         return $str;
     }
 }

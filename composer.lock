@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "00fc39dd7d8b7b8e2206d6ede96216af",
+    "hash": "cd99ee911071f291ee0d1f6489c6868c",
     "packages": [
         {
             "name": "fzaninotto/faker",
@@ -50,98 +50,6 @@
                 "fixtures"
             ],
             "time": "2013-12-16 21:56:48"
-        },
-        {
-            "name": "guzzle/guzzle",
-            "version": "v3.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
-                "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3",
-                "symfony/event-dispatcher": ">=2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
-            },
-            "require-dev": {
-                "doctrine/cache": "*",
-                "monolog/monolog": "1.*",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "1.0.*",
-                "symfony/class-loader": "*",
-                "zendframework/zend-cache": "2.0.*",
-                "zendframework/zend-log": "2.0.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Guzzle\\Tests": "tests/",
-                    "Guzzle": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
-                }
-            ],
-            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2013-12-05 23:39:20"
         },
         {
             "name": "illuminate/container",
@@ -396,100 +304,6 @@
                 "time"
             ],
             "time": "2014-01-07 05:10:44"
-        },
-        {
-            "name": "paquettg/php-html-parser",
-            "version": "1.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paquettg/php-html-parser.git",
-                "reference": "dbaf2cab29bd745469bc69b9cc5bb5aaea20451d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/paquettg/php-html-parser/zipball/dbaf2cab29bd745469bc69b9cc5bb5aaea20451d",
-                "reference": "dbaf2cab29bd745469bc69b9cc5bb5aaea20451d",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/guzzle": "v3.8.0",
-                "paquettg/string-encode": "0.1.0",
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "PHPHtmlParser": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gilles Paquette",
-                    "email": "paquettg@gmail.com",
-                    "homepage": "http://gillespaquette.ca"
-                }
-            ],
-            "description": "An HTML DOM parser. It allows you to manipulate HTML. Find tags on an HTML page with selectors just like jQuery.",
-            "homepage": "https://github.com/paquettg/php-html-parser",
-            "keywords": [
-                "dom",
-                "html",
-                "parser"
-            ],
-            "time": "2014-01-03 15:00:35"
-        },
-        {
-            "name": "paquettg/string-encode",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paquettg/string-encoder.git",
-                "reference": "f0e6ae7e974287e28fcb6e4e70cd9231a3b62b62"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/paquettg/string-encoder/zipball/f0e6ae7e974287e28fcb6e4e70cd9231a3b62b62",
-                "reference": "f0e6ae7e974287e28fcb6e4e70cd9231a3b62b62",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "stringEncode": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gilles Paquette",
-                    "email": "paquettg@gmail.com",
-                    "homepage": "http://gillespaquette.ca"
-                }
-            ],
-            "description": "Facilitating the process of altering string encoding in PHP.",
-            "homepage": "https://github.com/paquettg/string-encoder",
-            "keywords": [
-                "charset",
-                "encoding",
-                "string"
-            ],
-            "time": "2013-12-13 15:26:20"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -897,7 +711,7 @@
                     "homepage": "http://henriquemoody.com/"
                 },
                 {
-                    "name": "Alexandre Gaigalas",
+                    "name": "Alexandre",
                     "email": "alexandre@gaigalas.net"
                 },
                 {
@@ -1129,60 +943,6 @@
             "time": "2013-12-08 10:18:35"
         },
         {
-            "name": "symfony/event-dispatcher",
-            "version": "v2.4.1",
-            "target-dir": "Symfony/Component/EventDispatcher",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "e3ba42f6a70554ed05749e61b829550f6ac33601"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e3ba42f6a70554ed05749e61b829550f6ac33601",
-                "reference": "e3ba42f6a70554ed05749e61b829550f6ac33601",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "symfony/dependency-injection": "~2.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2013-12-28 08:12:03"
-        },
-        {
             "name": "symfony/yaml",
             "version": "v2.4.1",
             "target-dir": "Symfony/Component/Yaml",
@@ -1277,56 +1037,6 @@
                 "templating"
             ],
             "time": "2013-12-06 07:47:10"
-        },
-        {
-            "name": "uzulla/mockslimclient",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/uzulla/mock_slim_client.git",
-                "reference": "64ed0aa9554117c49f62a9d7fb6a1a513dea8e85"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/uzulla/mock_slim_client/zipball/64ed0aa9554117c49f62a9d7fb6a1a513dea8e85",
-                "reference": "64ed0aa9554117c49f62a9d7fb6a1a513dea8e85",
-                "shasum": ""
-            },
-            "require": {
-                "paquettg/php-html-parser": "1.6.*",
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.*",
-                "slim/slim": "2.4.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Uzulla\\MockSlimClient": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "uzulla",
-                    "email": "uzulla@himitsukichi.com",
-                    "homepage": "http://twitter.com/uzulla/"
-                }
-            ],
-            "description": "web scraper for Slim framework Mock. (for UnitTesting)",
-            "homepage": "https://github.com/uzulla/mock_slim_client",
-            "keywords": [
-                "php",
-                "phpunit",
-                "slim",
-                "test",
-                "unittest"
-            ],
-            "time": "2014-01-09 10:07:35"
         }
     ],
     "packages-dev": [

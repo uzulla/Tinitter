@@ -3,6 +3,9 @@
 
 これはサンプルアプリケーションの掲示板、Tinitter v1.0.0を一部のレンタルサーバーで動作するように修正したものです。テストなどが省かれています。
 
+こちらからZIPでDLできます。
+[https://github.com/uzulla/Tinitter/archive/for_rental_server.zip](https://github.com/uzulla/Tinitter/archive/for_rental_server.zip)
+
 こちらは修正例なので、詳しくは通常版の[Tinitter](https://github.com/uzulla/Tinitter)を見てください
 
 # 構成要素

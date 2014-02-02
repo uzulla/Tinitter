@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteBase /
+# http://hostname/hoge/ 以下などにインストールする場合上をコメントアウトして以下をコメントイン
+# RewriteBase /hoge/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . /index.php [L]
+# http://hostname/hoge/ 以下などにインストールする場合上をコメントアウトして以下をコメントイン
+# RewriteRule . /hoge/index.php [L]

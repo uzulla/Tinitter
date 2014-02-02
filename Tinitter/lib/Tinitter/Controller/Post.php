@@ -16,7 +16,7 @@ class Post
             $post->body = $params['body'];
             $post->save();
 
-            $app->redirect('/');
+            $app->redirect(BASE_URL.'/');
         } else {
             $app->render(
                 'Post/form.twig',

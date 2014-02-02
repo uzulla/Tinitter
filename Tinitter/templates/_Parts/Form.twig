@@ -1,7 +1,7 @@
 {% autoescape true %}
 <div class="postform">
     <h3>投稿フォーム</h3>
-    <form method="post" action="/post/commit">
+    <form method="post" action="{{base_url}}/post/commit">
         <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
         <div class="form-group {% if error_list.nickname %}has-error{% endif %}">
             <label>ニックネーム<em>(半角英数16文字まで)</em></label><br>

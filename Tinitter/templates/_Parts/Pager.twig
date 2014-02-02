@@ -3,16 +3,16 @@
     <ul class="pagination pagination-lg">
         {% if page_num > 1 %}
             {% if (page_num-1) == 1 %}
-                <li class="active"><a href="/" class="prev">&laquo;</a></li>
+                <li class="active"><a href="{{base_url}}/" class="prev">&laquo;</a></li>
             {% else %}
-                <li class="active"><a href="/page/{{page_num-1}}" class="prev">&laquo;</a></li>
+                <li class="active"><a href="{{base_url}}/page/{{page_num-1}}" class="prev">&laquo;</a></li>
             {% endif %}
         {% endif %}
 
         <li><span class="page-num">{{page_num}}</span></li>
 
         {% if next_page_is_exist %}
-            <li class="active"><a href="/page/{{page_num+1}}" class="next">&raquo;</a></li>
+            <li class="active"><a href="{{base_url}}/page/{{page_num+1}}" class="next">&raquo;</a></li>
         {% endif %}
     </ul>
 </div>

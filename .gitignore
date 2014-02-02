@@ -1,6 +1,5 @@
-/vendor/
-composer.phar
-sqlite.db
+/Tinitter/vendor/
+/Tinitter/composer.phar
+/Tinitter/sqlite.db
+/Tinitter/config.php
 .php-version
-config.php
-/htdocs/.htaccess

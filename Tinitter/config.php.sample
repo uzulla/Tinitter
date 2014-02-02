@@ -1,0 +1,24 @@
+<?php
+define('TEMPLATES_DIR_PATH', __DIR__.'/templates');
+define('DEBUG', true);
+
+// レンタルサーバーによっては、http://hostname/name/
+// などとホスト名以下にディレクトリが切られてしまうので、
+// その場合 /name を設定する。
+define('BASE_URL', '');
+
+//$db_settings = array(
+//    'driver'    => 'mysql',
+//    'host'      => '127.0.0.1',
+//    'port'      => '3306',
+//    'database'  => 'tinitter',
+//    'username'  => 'tinitter_user',
+//    'password'  => 'tinitter_pass',
+//    'charset'   => 'utf8',
+//    'collation' => 'utf8_unicode_ci'
+//);
+
+$db_settings = array(
+    'driver' => 'sqlite',
+    'database' => __DIR__."/sqlite.db"
+);

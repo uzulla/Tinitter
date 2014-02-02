@@ -1,12 +1,9 @@
-サンプルアプリケーション Tinitter
-==============================
+サンプルアプリケーション Tinitter、レンタルサーバー向け設定
+====================================================
 
-これはサンプルアプリケーションの掲示板、Tinitterです。
+これはサンプルアプリケーションの掲示板、Tinitter v1.0.0を一部のレンタルサーバーで動作するように修正したものです。テストなどが省かれています。
 
-- ニックネームとテキストを投稿できる
-- 投稿をページ送りで見る事ができる
-
-だけの単純なウェブアプリケーションです
+こちらは修正例なので、詳しくは通常版の[Tinitter](https://github.com/uzulla/Tinitter)を見てください
 
 # 構成要素
 
@@ -18,75 +15,53 @@
 
 # 動作に必要な条件
 
-- PHP 5.4以上
-- sqlite3 サポート
-- （DBセットアップのためにsqlite3のcli）
+- PHP 5.3以上
+- Mysql サポート
+− この手直しバージョンはApacheを想定しています。
 
 # セットアップ
 
-## composerでライブラリを取得
+## composerでライブラリを取得（手元のPCで実行します）
 
 ### Composerインストール
 
 ```
-# プロジェクトトップディレクトリで
+# ローカルのPCで
+# Tinitter ディレクトリの中で
 $ php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
 ```
 
 ### Composerでライブラリのインストール
 
 ```
-# プロジェクトトップディレクトリで
+# ローカルのPCで
+# Tinitter ディレクトリの中で
 $ php composer.phar install
 ```
 
 ## config を作成
 
 ```
-# サンプルコンフィグファイルをコピーして作成する
-$ cp config.php.sample config.php
+# サンプルコンフィグファイルをコピーして作成します。
+$ cp Tinitter/config.php.sample Tinitter/config.php
 ```
 
-SQLiteを使う場合には、内容を変更する必要はありません。
-Mysqlを利用する場合には、後述の設定を行ってください。
-
-## .htaccess設定
-
-Apacheの場合、以下の設定をおこなってください
-
+もしサーバーが`http://hostname/~hoge/`や`http://hostname/hoge/`のようにディレクトリ以下がトップになる場合には、
 ```
-$ cp htdocs/.htaccess.sample htdocs/.htaccess
+define('BASE_URL', '/hoge');
 ```
+などと修正してください。
 
-## DBセットアップ
-
-### SQLite利用時
-
-```
-# プロジェクトトップディレクトリで
-$ sqlite3 sqlite.db < schema.sqlite3.sql
-```
-
-データを初期化したい場合、上記を再度実行してください。
+## DBセットアップ（レンタルサーバーの管理画面などで実行します）
 
 ### Mysql利用時
 
-- DB名：tinitter
-- ユーザー名：tinitter_user
-- パスワード：tinitter_pass
-の場合
+業者によってまちまちですが、管理画面よりMysqlのDB、ユーザーなどを作成し、`Tinitter/schema.mysql.sql`の内容を、phpMyAdmin等からSQL（やインポート）として実行してください。
 
-以下を実行してDBにテーブルを登録
+その後`Tinitter/config.php`を修正し、既存の`$db_settings〜`を書き換えます。(ユーザー名やDB名、host名は的旨変更ください）
 
 ```
-$ mysql -u tinitter_user -p tinitter < schema.mysql.sql
-# プロンプトがでたら、パスワードを入力
-```
-
-`config.php`を修正し、既存の`$db_settings〜`を以下のように書き換えます。
-
-```
-$db_settings = [
+$db_settings = array(
     'driver'    => 'mysql',
     'host'      => '127.0.0.1',
     'port'      => '3306',
@@ -95,38 +70,46 @@ $db_settings = [
     'password'  => 'tinitter_pass',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci'
-];
+);
 ```
-
-**上記設定をしても、テストはSQLiteで動作します。詳しくはテストの項目を参照ください。**
-
-
-# Builtin Serverでの起動
-
-```
-# プロジェクトの`htdocs/`ディレクトリで
-$ php -S 127.0.0.1:8080
-```
-
-`http://localhost:8080/`にアクセス
-
-# 他の実行環境での実行
-
-プロジェクトの`htdocs/`をDocumentRootに設定してください。
 
 # 設定項目
 
 ## デバッグモード切替
 
-DEBUG定数を`true`/`false`で切り換える。
+DEBUG定数を`true`/`false`で切り換えます。
 
 ```
-# config.php
+# `Tinitter/config.php`
 define('DEBUG', true);
 ```
 
-`true`時は、例外時にSlimがスタックトレースを出力します。本番では`false`にします。
+`true`時は、例外時にSlimがスタックトレースを出力します。
+動作を確認したら、かならずfalseにしましょう。
 
-# 自動テスト
 
-`test/README.md`を参照してください
+# アップロード
+
+
+```
+index.php
+favicon.ico
+.htaccess
+Tinitter/
+css/
+vendor/
+```
+
+これらをアップロードします。
+これら以外はアップロードしません。
+
+サーバーによっては.htaccessがすでにアップロードされている場合があります、既存のものにうまく追記しましょう。
+（または、ディレクトリを別途作成して、その中にアップロードしてみましょう）
+
+# うまく動かない場合
+
+まずはエラーログを見てください。
+次に、DB等の設定がまちがっていないか確認してください。
+PHPのバージョンがとても古かったりしないか確認してください。
+
+

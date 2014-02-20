@@ -1,12 +1,23 @@
 サンプルアプリケーション Tinitter、レンタルサーバー向け設定
 ====================================================
 
-これはサンプルアプリケーションの掲示板、Tinitter v1.0.0を一部のレンタルサーバーで動作するように修正したものです。テストなどが省かれています。
+これは下記書籍向けサンプルアプリケーションのTinitterを、一部のレンタルサーバーで動作するように修正したものです。
 
-こちらからZIPでDLできます。
-[https://github.com/uzulla/Tinitter/archive/for_rental_server.zip](https://github.com/uzulla/Tinitter/archive/for_rental_server.zip)
+[Webアプリエンジニア養成読本 ［しくみ、開発、環境構築・運用…全体像を最新知識で最初から! ］(Software Design plus)](http://www.amazon.co.jp/gp/product/4774163678/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4774163678&linkCode=as2&tag=uzulla-22)
 
-こちらは修正例なので、詳しくは通常版の[Tinitter](https://github.com/uzulla/Tinitter)を見てください
+![表紙画像](http://ecx.images-amazon.com/images/I/51b-W0r%2B9XL._SL500_AA300_.jpg)
+
+- 掲示板プログラム
+- ニックネームとテキストを投稿できる
+- 投稿をページ送りで見る事ができる
+
+単純なPHP製のウェブアプリケーションです。
+
+# ダウンロード
+
+[こちらからZIPでDLできます](https://github.com/uzulla/Tinitter/archive/for_rental_server.zip)
+
+こちらは修正例なので、詳しくは通常版の[Tinitter](https://github.com/uzulla/Tinitter)を確認してください
 
 # 構成要素
 

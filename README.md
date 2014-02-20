@@ -1,4 +1,4 @@
-サンプルアプリケーション Tinitter
+サンプルアプリケーション Tinitter、PHP5.3以下向け設定
 ==============================
 
 これはサンプルアプリケーションの掲示板、Tinitterです。
@@ -18,7 +18,7 @@
 
 # 動作に必要な条件
 
-- PHP 5.4以上
+- PHP 5.3以上
 - sqlite3 サポート
 - （DBセットアップのためにsqlite3のcli）
 
@@ -86,7 +86,7 @@ $ mysql -u tinitter_user -p tinitter < schema.mysql.sql
 `config.php`を修正し、既存の`$db_settings〜`を以下のように書き換えます。
 
 ```
-$db_settings = [
+$db_settings = array(
     'driver'    => 'mysql',
     'host'      => '127.0.0.1',
     'port'      => '3306',
@@ -95,7 +95,7 @@ $db_settings = [
     'password'  => 'tinitter_pass',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci'
-];
+);
 ```
 
 **上記設定をしても、テストはSQLiteで動作します。詳しくはテストの項目を参照ください。**
@@ -103,14 +103,10 @@ $db_settings = [
 
 # Builtin Serverでの起動
 
-```
-# プロジェクトの`htdocs/`ディレクトリで
-$ php -S 127.0.0.1:8080
-```
+PHP5.3はBuiltinserverをサポートしていません。
+別途Apacheなどを設定してアクセスしてください。
 
-`http://localhost:8080/`にアクセス
-
-# 他の実行環境での実行
+# Web Serverの設定
 
 プロジェクトの`htdocs/`をDocumentRootに設定してください。
 

@@ -1,25 +1,30 @@
 サンプルアプリケーション Tinitter
 ==============================
 
-これはサンプルアプリケーションの掲示板、Tinitterです。
+これは下記書籍向けサンプルアプリケーションの掲示板、Tinitterです。
+
+[Webアプリエンジニア養成読本 ［しくみ、開発、環境構築・運用…全体像を最新知識で最初から! ］(Software Design plus)](http://www.amazon.co.jp/gp/product/4774163678/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4774163678&linkCode=as2&tag=uzulla-22)
+
+![表紙画像](http://ecx.images-amazon.com/images/I/51b-W0r%2B9XL._SL500_AA300_.jpg)
+
 
 - ニックネームとテキストを投稿できる
 - 投稿をページ送りで見る事ができる
 
-だけの単純なウェブアプリケーションです
+単純なPHP製のウェブアプリケーションです。
 
 # ダウンロード
 
 （勿論Gitでcloneいただいても問題ありません）
 
-通常版 解説ページ（本ページ）
-[通常版をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/master.zip)
-
-[PHP5.3以下用 解説ページ](https://github.com/uzulla/Tinitter/tree/php53)
-[PHP5.3以下用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/php53.zip)
-
-[レンタルサーバーなど向け 解説ページ](https://github.com/uzulla/Tinitter/tree/for_rental_server)
-[レンタルサーバーなど向け用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/for_rental_server.zip)
+- 通常版 解説ページ（本ページ）
+- [通常版をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/master.zip)
+***
+- [PHP5.3以下用 解説ページ](https://github.com/uzulla/Tinitter/tree/php53)
+- [PHP5.3以下用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/php53.zip)
+***
+- [レンタルサーバーなど向け 解説ページ](https://github.com/uzulla/Tinitter/tree/for_rental_server)
+- [レンタルサーバーなど向け用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/for_rental_server.zip)
 
 
 

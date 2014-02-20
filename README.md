@@ -1,13 +1,13 @@
 サンプルアプリケーション Tinitter
 ==============================
 
-これは下記書籍向けサンプルアプリケーションの掲示板、Tinitterです。
+これは下記書籍向けサンプルアプリケーションのTinitterです。
 
 [Webアプリエンジニア養成読本 ［しくみ、開発、環境構築・運用…全体像を最新知識で最初から! ］(Software Design plus)](http://www.amazon.co.jp/gp/product/4774163678/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4774163678&linkCode=as2&tag=uzulla-22)
 
 ![表紙画像](http://ecx.images-amazon.com/images/I/51b-W0r%2B9XL._SL500_AA300_.jpg)
 
-
+- 掲示板プログラム
 - ニックネームとテキストを投稿できる
 - 投稿をページ送りで見る事ができる
 

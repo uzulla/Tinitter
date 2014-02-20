@@ -8,6 +8,10 @@
 
 だけの単純なウェブアプリケーションです
 
+# ダウンロード
+
+[こちらからZIPでダウンロードいただけます](https://github.com/uzulla/Tinitter/archive/php53.zip)
+
 # 構成要素
 
 - WAF: Slim Framework

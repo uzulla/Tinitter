@@ -12,6 +12,8 @@
 
 [こちらからZIPでダウンロードいただけます](https://github.com/uzulla/Tinitter/archive/php53.zip)
 
+こちらは修正例なので、詳しくは通常版の[Tinitter](https://github.com/uzulla/Tinitter)を見てください
+
 # 構成要素
 
 - WAF: Slim Framework

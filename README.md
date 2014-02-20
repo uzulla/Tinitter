@@ -1,18 +1,24 @@
 サンプルアプリケーション Tinitter、PHP5.3以下向け設定
 ==============================
 
-これはサンプルアプリケーションの掲示板、Tinitterです。
+これは下記書籍向けサンプルアプリケーションのTinitterです。
 
+[Webアプリエンジニア養成読本 ［しくみ、開発、環境構築・運用…全体像を最新知識で最初から! ］(Software Design plus)](http://www.amazon.co.jp/gp/product/4774163678/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4774163678&linkCode=as2&tag=uzulla-22)
+
+![表紙画像](http://ecx.images-amazon.com/images/I/51b-W0r%2B9XL._SL500_AA300_.jpg)
+
+- 掲示板プログラム
 - ニックネームとテキストを投稿できる
 - 投稿をページ送りで見る事ができる
 
-だけの単純なウェブアプリケーションです
+単純なPHP製のウェブアプリケーションです。
+
 
 # ダウンロード
 
-[こちらからZIPでダウンロードいただけます](https://github.com/uzulla/Tinitter/archive/php53.zip)
+本ページはPHP5.3向けの修正例です、通常版の[Tinitter](https://github.com/uzulla/Tinitter)も確認ください
 
-こちらは修正例なので、詳しくは通常版の[Tinitter](https://github.com/uzulla/Tinitter)を見てください
+[こちらからZIPでダウンロードいただけます](https://github.com/uzulla/Tinitter/archive/php53.zip)
 
 # 構成要素
 

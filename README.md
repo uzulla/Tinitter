@@ -8,6 +8,24 @@
 
 だけの単純なウェブアプリケーションです
 
+# ダウンロード
+
+（勿論Gitでcloneいただいても問題ありません）
+
+通常版 解説ページ（本ページ）
+[通常版をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/master.zip)
+
+[PHP5.3以下用 解説ページ](https://github.com/uzulla/Tinitter/tree/php53)
+[PHP5.3以下用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/php53.zip)
+
+[レンタルサーバーなど向け 解説ページ](https://github.com/uzulla/Tinitter/tree/for_rental_server)
+[レンタルサーバーなど向け用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/for_rental_server.zip)
+
+
+
+以下は通常版についての解説になります。
+通常版以外のREADMEは各ブランチ（上のリンクやプルダウンで選択）を変更してください。
+
 # 構成要素
 
 - WAF: Slim Framework

@@ -19,10 +19,14 @@
 
 - 通常版 解説ページ（本ページ）
 - [通常版をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/master.zip)
+
 ***
+
 - [PHP5.3以下用 解説ページ](https://github.com/uzulla/Tinitter/tree/php53)
 - [PHP5.3以下用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/php53.zip)
+
 ***
+
 - [レンタルサーバーなど向け 解説ページ](https://github.com/uzulla/Tinitter/tree/for_rental_server)
 - [レンタルサーバーなど向け用をZIPでダウンロード](https://github.com/uzulla/Tinitter/archive/for_rental_server.zip)
 

@@ -4,9 +4,11 @@
     "slim/slim": "^3.1",
     "slim/twig-view": "^2.3",
     "twig/twig": "^2.4",
-    "slim/csrf": "^0.8.2",
     "Respect/Validation": "^1.1",
     "aura/sqlquery": "^2.7",
+    "wyrihaximus/react-http-middleware-session": "dev-master",
+    "wyrihaximus/react-http-middleware-webroot-preload": "^1.1",
+    "react/cache": "^0.4.2",
     "phpunit/phpunit": "3.*",
     "fzaninotto/faker": "1.3.*"
   },

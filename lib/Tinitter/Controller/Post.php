@@ -10,10 +10,12 @@ class Post
 {
     /** @var \Slim\Views\Twig */
     private $view;
+    private $csrf_token;
 
     public function __construct($c)
     {
         $this->view = $c->view;
+        $this->csrf_token = $c->csrf_token;
     }
 
     public function __invoke(ServerRequestInterface $request, Response $response, $args)

@@ -1,9 +1,11 @@
 テスト実行方法
 ============
 
+TBD
+
 # 準備
 
-事前にComposerででphpunitをインストールします
+事前にComposerでphpunitをインストールします
 
 # 注意
 
@@ -59,24 +61,3 @@ PHPUnit でディレクトリを指定した場合、`*Test.php`のファイル�
 | `TestCase/*/*Test.php`| PHPUnitテスト定義|
 
 
-mysqlを利用したテスト
-===================
-
-`bootstrap.php`に記述されたDB接続情報を編集してください。
-
-```
-// Mysql設定例
-$db_settings = [
-    'driver'    => 'mysql',
-    'host'      => '127.0.0.1',
-    'port'      => '3306',
-    'database'  => 'tinitter_test',
-    'username'  => 'tinitter_test_user',
-    'password'  => 'tinitter_test_pass',
-    'charset'   => 'utf8',
-    'collation' => 'utf8_unicode_ci'
-];
-define("TEST_SCHEMA_SQL", __DIR__."/../schema.mysql.sql");
-```
-
-**Mysqlの場合も実行するとテーブルの再作成をおこないますので、データは初期化されます。必ずテスト用のDBを用意してそちらに接続するようにしてください。**

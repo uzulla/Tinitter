@@ -1,6 +1,5 @@
 {% extends "frame.twig" %}
 {% block content %}
-{% autoescape true %}
 
 {% if page_num == 1 %}
     {% include "_Parts/Form.twig" %}
@@ -20,5 +19,4 @@
 
 {% include "_Parts/Pager.twig" %}
 
-{% endautoescape %}
 {% endblock %}

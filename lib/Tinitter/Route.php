@@ -1,20 +1,39 @@
 <?php
 namespace Tinitter;
+
+use Tinitter\Controller;
+
 class Route
 {
     /**
      * 渡されたslimインスタンスにルートを登録
-     * @param \Slim\Slim $app
+     * @param \Slim\App $container
      */
-    public static function registration(\Slim\Slim $app)
+    public static function registration(\Slim\Container $container)
     {
-        // SlimのCSRF対策プラグインを有効化
-        $app->add(new \Slim\Extras\Middleware\CsrfGuard());
-        // トップページ
-        $app->get('/', '\Tinitter\Controller\TimeLine:show');
-        // 投稿一覧
-        $app->get('/page/:page_num', '\Tinitter\Controller\TimeLine:show');
-        // 新規投稿系、保存
-        $app->post('/post/commit', '\Tinitter\Controller\Post:commit');
+        /** @var \Slim\Router $app */
+        $router = $container['router'];
+
+
+        {
+            // トップページ
+            $router->map(['GET'], '/', Controller\TimeLine::class);
+
+            // 投稿一覧
+            $router->map(['GET'], '/page/{page_num:\d+}', Controller\TimeLine::class);
+
+            $container[Controller\TimeLine::class] = function ($c) {
+                return new Controller\TimeLine($c);
+            };
+        }
+
+        {
+            // 新規投稿系、保存
+            $router->map(['POST'], '/post/commit', Controller\Post::class);
+
+            $container[Controller\Post::class] = function ($c) {
+                return new Controller\Post($c);
+            };
+        }
     }
 }

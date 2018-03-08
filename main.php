@@ -1,4 +1,11 @@
 <?php
+// Pharで実行時に挙動を変える
+if (Phar::running() !== "") {
+    // pharの外にあるsqliteをマウント
+    Phar::mount('sqlite.db', dirname(Phar::running(false)) . '/sqlite.db');
+    Phar::interceptFileFuncs();
+}
+
 require "vendor/autoload.php";
 require __DIR__ . '/config.php';
 
@@ -28,7 +35,7 @@ $server = new Server(array(
         });
     },
     // 静的ファイル配信
-    new \WyriHaximus\React\Http\Middleware\WebrootPreloadMiddleware(__DIR__."/htdocs"),
+    new \WyriHaximus\React\Http\Middleware\WebrootPreloadMiddleware(__DIR__ . "/htdocs"),
     // セッション
     new \WyriHaximus\React\Http\Middleware\SessionMiddleware(
         'MySessionCookie',
@@ -46,19 +53,19 @@ $server = new Server(array(
         // read session
         $session_obj = $request->getAttribute(\WyriHaximus\React\Http\Middleware\SessionMiddleware::ATTRIBUTE_NAME);
         $session = $session_obj->getContents();
-        if(!isset($session['csrf_token'])) {
+        if (!isset($session['csrf_token'])) {
             $csrf_token = base64_encode(random_bytes(64));
             $session_obj->setContents([
                 'csrf_token' => $csrf_token,
             ]);
-        }else{
+        } else {
             $csrf_token = $session['csrf_token'];
         }
 
         // check token
-        if(strtolower($request->getMethod()) === "post"){
+        if (strtolower($request->getMethod()) === "post") {
             $params = $request->getParsedBody();
-            if(!isset($params['csrf_token']) || $params['csrf_token'] !== $csrf_token){
+            if (!isset($params['csrf_token']) || $params['csrf_token'] !== $csrf_token) {
                 error_log("invalid csrf_token");
                 return new Response(400, [], "invalid csrf_token");
             }
@@ -85,11 +92,12 @@ $server = new Server(array(
             return $view;
         };
 
-        // csrf_tokenを保持し、Twigヘルパに渡す
+        // csrf_tokenをコンテナに保持し
         $csrf_token = $request->getAttribute('csrf_token');
-        $container['csrf_token'] = function ($c) use ($csrf_token){
+        $container['csrf_token'] = function ($c) use ($csrf_token) {
             return $csrf_token;
         };
+        // Twigヘルパにも渡す
         $container->view->addExtension(new \Tinitter\Misc\TwigExt\CsrfExtension($csrf_token));
 
         // Slimにルートを登録
@@ -103,4 +111,5 @@ $server = new Server(array(
 
 $socket = new React\Socket\Server(8888, $loop);
 $server->listen($socket);
+echo "running... stop to Ctrl+C" . PHP_EOL;
 $loop->run();

@@ -1,0 +1,7 @@
+{
+  "directories": ["htdocs","lib","templates","vendor"],
+  "files": ["config.php","main.php"],
+  "main": "main.php",
+  "output": "phartest/react_tinitter.phar",
+  "stub": true
+}

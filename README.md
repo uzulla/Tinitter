@@ -25,6 +25,8 @@ $ ./build.sh
 $ ./selfbash.sh
 ```
 
+OSXの場合（あるいは、BSD Tarの場合）は事前にgnu tarをいれてください
+
 
 # ＝＝ここから以下のREADMEはこのブランチでは正しくないかもしれません＝＝
 

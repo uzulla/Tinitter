@@ -35,7 +35,7 @@ $server = new Server(array(
         });
     },
     // 静的ファイル配信
-    new \WyriHaximus\React\Http\Middleware\WebrootPreloadMiddleware(__DIR__ . "/htdocs"),
+    new \Tinitter\Misc\PatchedWebrootPreloadMiddleware(__DIR__ . "/htdocs"),
     // セッション
     new \WyriHaximus\React\Http\Middleware\SessionMiddleware(
         'MySessionCookie',

@@ -1,3 +1,34 @@
+# このブランチはPHPerKaigi2018デモ用のものです
+
+## うごかしかた
+
+```
+$ composer install
+$ php main.php
+$ open http://localhost:8888/
+```
+
+## phar build
+
+```
+# get box https://github.com/box-project/box2
+$ box.phar build
+$ php react_tinitter.phar
+```
+
+## 自己解凍bash
+
+```
+$ cp /path/to/php .
+$ cd selfbash
+$ ./build.sh
+$ ./selfbash.sh
+```
+
+
+# ＝＝ここから以下のREADMEはこのブランチでは正しくないかもしれません＝＝
+
+
 サンプルアプリケーション Tinitter
 ==============================
 

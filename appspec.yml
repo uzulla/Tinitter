@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /Tinitter
+
+hooks:
+  BeoreInstall:
+    - location: script/before_install.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: script/after_install.sh
+      timeout: 300
+      runas: root

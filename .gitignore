@@ -3,3 +3,4 @@ composer.phar
 sqlite.db
 .php-version
 config.php
+/packer/credential.json

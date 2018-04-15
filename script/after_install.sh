@@ -11,4 +11,5 @@ cd /Tinitter/htdocs
 cp .htaccess.sample .htaccess
 
 chown -R apache:apache /Tinitter
+chmod 777 /Tinitter/sqlite.db
 

@@ -5,10 +5,13 @@ PHP_PATH = php
 
 # 開発環境準備系(主にローカル開発用)
 
-dev-setup: composer.phar composer-install local-reset config.php
+dev-setup: composer.phar composer-install local-reset config.php htdocs/.htaccess
 
 config.php:
 	cp config.php.sample config.php
+
+htdocs/.htaccess:
+	cp htdocs/.htaccess.sample htdocs/.htaccess
 
 composer.phar:
 	curl -sSfL -o composer-setup.php https://getcomposer.org/installer
@@ -27,6 +30,10 @@ local-reset:
 .PHONY: composer-dump-autoload-opt
 composer-dump-autoload-opt:
 	composer dump-autoload --optimize --no-dev
+
+.PHONY: test
+test:
+	vendor/bin/phpunit
 
 # for built in web server
 

@@ -1,6 +1,6 @@
 <?php
 namespace Tinitter\Test;
-class Base extends \PHPUnit_Framework_TestCase
+class Base extends \PHPUnit\Framework\TestCase
 {
     use \Uzulla\MockSlimClient; // traitを利用
 
@@ -28,7 +28,7 @@ class Base extends \PHPUnit_Framework_TestCase
     /**
      * テストケース開始の度に呼び出される
      */
-    protected function setUp()
+    protected function setUp() : void
     {
         // テスト用DBを初期化する
         $schema_sql = file_get_contents(TEST_SCHEMA_SQL);

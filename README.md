@@ -13,6 +13,14 @@
 
 単純なPHP製のウェブアプリケーションです。
 
+# 書籍時点からの非互換なアップデート
+
+masterブランチの対象PHPバージョンを7.3 に上げました。
+
+php5系で動作をさせたい場合には、`php5.6`ブランチを参照ください。
+
+- https://github.com/uzulla/Tinitter/tree/php5.6
+
 # 正誤情報(2014/04/14更新)
 
 上記書籍にて一部誤りがございました、以下正誤情報をご覧ください。
@@ -51,13 +59,21 @@
 - Varidator: Respect/Validation
 - Test: phpunit, faker
 
-# 動作に必要な条件
+# 確認動作環境
 
-- PHP 5.4以上
+- PHP 7.3以上
 - sqlite3 サポート
 - （DBセットアップのためにsqlite3のcli）
 
 # セットアップ
+
+以下の実行でMac,Linux系ならばサンプル的なセットアップが完了します。
+
+```
+$ make dev-setup
+```
+
+以後は個別に実行する際の手順です。
 
 ## composerでライブラリを取得
 
@@ -104,7 +120,7 @@ $ sqlite3 sqlite.db < schema.sqlite3.sql
 
 データを初期化したい場合、上記を再度実行してください。
 
-### Mysql利用時
+### Mysql利用時(オプショナル)
 
 - DB名：tinitter
 - ユーザー名：tinitter_user
@@ -139,6 +155,9 @@ $db_settings = [
 # Builtin Serverでの起動
 
 ```
+# プロジェクトディレクトリで
+$ make strt
+# あるいは
 # プロジェクトの`htdocs/`ディレクトリで
 $ php -S 127.0.0.1:8080
 ```
@@ -164,4 +183,8 @@ define('DEBUG', true);
 
 # 自動テスト
 
-`test/README.md`を参照してください
+```
+$ make test
+```
+
+あるいは、`test/README.md`を参照してください

@@ -1,3 +1,3 @@
 #!/bin/sh
-php ../vendor/bin/phpunit
+cd .. && php vendor/bin/phpunit
 

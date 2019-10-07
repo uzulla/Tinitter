@@ -24,22 +24,22 @@ mbstring.internal_encoding = UTF-8
 # 全テスト実行
 
 ```
-# test/ディレクトリにて
-$ ../vendor/bin/phpunit
+# レポジトリルートディレクトリにて
+$ vendor/bin/phpunit
+あるいは
+$ make test
 ```
 
 # 単テスト実行
 
 ```
-# test/ディレクトリにて
-$ ../vendor/bin/phpunit Test/Controller/TimeLineTest.php
+$ vendor/bin/phpunit test/TestCase/Controller/TimeLineTest.php
 ```
 
 #ディレクトリ以下のテスト実行
 
 ```
-# test/ディレクトリにて
-$ ../vendor/bin/phpunit Test/Controller/
+$ vendor/bin/phpunit test/TestCase/Controller
 ```
 
 PHPUnit でディレクトリを指定した場合、`*Test.php`のファイルが再帰的に読み込まれ、実行されます。
@@ -54,9 +54,9 @@ PHPUnit でディレクトリを指定した場合、`*Test.php`のファイル�
 |----|----|
 | `phpunit.xml`| PHPUnit設定ファイル|
 | `bootstrap.php`| `phpunit.xml`で指定された、テスト実行時に事前実行されるコード、lib以下のオートロードなど設定|
-| `../lib/Tinitter/Test/`| テスト用のライブラリクラス|
-| `../lib/Tinitter/Test/Base.php`| テスト用のベースクラス、初期化やユーティリティ関数など|
-| `TestCase/*/*Test.php`| PHPUnitテスト定義|
+| `lib/Tinitter/Test/`| テスト用のライブラリクラス|
+| `lib/Tinitter/Test/Base.php`| テスト用のベースクラス、初期化やユーティリティ関数など|
+| `test/TestCase/*/*Test.php`| PHPUnitテスト定義|
 
 
 mysqlを利用したテスト

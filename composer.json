@@ -1,4 +1,6 @@
 {
+    "name": "uzulla/tinitter",
+    "description": "sample web app",
     "require": {
         "slim/slim": "2.4.*",
         "slim/views": "0.1.*",
